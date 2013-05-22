@@ -4,6 +4,11 @@ Description
 This _Chef_ cookbook installs and configures the [_Elasticsearch_](http://www.elasticsearch.org)
 search engine on a Linux compatible operating system.
 
+Reason for Deviation
+-----
+
+We do not use [monit](http://mmonit.com/monit/) nor the [ark](http://github.com/bryanwb/chef-ark) provider.
+
 -----
 ### Important Upgrade Notice ###
 
@@ -16,15 +21,9 @@ If you have questions, please leave a message in the comments section on the com
 
 It requires a working _Java_ installation on the target node; add your preferred `java` cookbook to the node `run_list`.
 
-The cookbook downloads the _elasticsearch_ tarball (via the [`ark`](http://github.com/bryanwb/chef-ark) provider),
-unpacks and moves it to the directory you have specified in the node configuration (`/usr/local/elasticsearch` by default).
+The cookbook downloads the _elasticsearch_ tarball unpacks and moves it to the directory you have specified in the node configuration (`/usr/local/elasticsearch` by default).
 
 It installs a service which enables you to start, stop, restart and check status of the _elasticsearch_ process.
-
-If you include the `elasticsearch::monit` recipe, it will create a configuration file for _Monit_,
-which will check whether _elasticsearch_ is running, reachable by HTTP and the cluster is in the "green" state.
-(Assumed you have included a compatible ["monit" cookbook](http://community.opscode.com/cookbooks/monit)
-in your run list first.)
 
 If you include the `elasticsearch::aws` recipe, the
 [AWS Cloud Plugin](http://github.com/elasticsearch/elasticsearch-cloud-aws) will be installed on the node,
@@ -253,6 +252,7 @@ http://github.com/elasticsearch/cookbook-elasticsearch
 License
 -------
 
+Author: Scott M. Likens (<scott@mopub.com>)
 Author: Karel Minarik (<karmi@elasticsearch.com>) and [contributors](http://github.com/elasticsearch/cookbook-elasticsearch/graphs/contributors)
 
 License: Apache

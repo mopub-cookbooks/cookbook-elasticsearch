@@ -5,8 +5,8 @@ Erubis::Context.send(:include, Extensions::Templates)
 elasticsearch = "elasticsearch-#{node.elasticsearch[:version]}"
 
 include_recipe "elasticsearch::curl"
-include_recipe "ark"
-
+node.set['java']['install_flavor']="openjdk"
+include_recipe "java"
 # Create user and group
 #
 group node.elasticsearch[:user] do
@@ -51,31 +51,52 @@ data_paths.each do |path|
   end
 end
 
-# Create service
-#
-template "/etc/init.d/elasticsearch" do
-  source "elasticsearch.init.erb"
-  owner 'root' and mode 0755
-end
+# # Create service
+# #
+# template "/etc/init.d/elasticsearch" do
+#   source "elasticsearch.init.erb"
+#   owner 'root' and mode 0755
+# end
 
-service "elasticsearch" do
-  supports :status => true, :restart => true
-  action [ :enable ]
-end
+# service "elasticsearch" do
+#   supports :status => true, :restart => true
+#   action [ :enable ]
+# end
 
 # Download, extract, symlink the elasticsearch libraries and binaries
 #
-ark "elasticsearch" do
-  url   node.elasticsearch[:download_url]
+remote_file Chef::Config[:file_cache_path] + "/" + node['elasticsearch']['filename'] do
+  source node['elasticsearch']['download_url']
+  not_if { ::File.exists?(Chef::Config[:file_cache_path] + "/" + node['elasticsearch']['filename']) }
+end
+
+directory "/data/elasticsearch/releases" do
+  action :create
+  recursive true
   owner node.elasticsearch[:user]
   group node.elasticsearch[:user]
-  version node.elasticsearch[:version]
-  has_binaries ['bin/elasticsearch', 'bin/plugin']
-  checksum node.elasticsearch[:checksum]
-
-  notifies :start,   'service[elasticsearch]'
-  notifies :restart, 'service[elasticsearch]'
+  mode 0755
 end
+
+execute "untar elasticsearch" do
+  command "tar Cxfz /data/elasticsearch/releases #{Chef::Config[:file_cache_path] + "/" + node['elasticsearch']['filename']}"
+  not_if { ::File.exists?("/data/elasticsearch/releases/elasticsearch-#{node['elasticsearch']['version']}/bin/elasticsearch") }
+end
+link "/data/elasticsearch/current" do
+  to "/data/elasticsearch/releases/elasticsearch-#{node['elasticsearch']['version']}"
+end
+
+# ark "elasticsearch" do
+#   url   node.elasticsearch[:download_url]
+#   owner node.elasticsearch[:user]
+#   group node.elasticsearch[:user]
+#   version node.elasticsearch[:version]
+#   has_binaries ['bin/elasticsearch', 'bin/plugin']
+#   checksum node.elasticsearch[:checksum]
+
+#   notifies :start,   'service[elasticsearch]'
+#   notifies :restart, 'service[elasticsearch]'
+# end
 
 # Increase open file limits
 #
@@ -112,7 +133,7 @@ template "elasticsearch-env.sh" do
   source "elasticsearch-env.sh.erb"
   owner node.elasticsearch[:user] and group node.elasticsearch[:user] and mode 0755
 
-  notifies :restart, 'service[elasticsearch]'
+  notifies :restart, 'runit_service[elasticsearch]'
 end
 
 # Create ES config file
@@ -122,7 +143,7 @@ template "elasticsearch.yml" do
   source "elasticsearch.yml.erb"
   owner node.elasticsearch[:user] and group node.elasticsearch[:user] and mode 0755
 
-  notifies :restart, 'service[elasticsearch]'
+  notifies :restart, 'runit_service[elasticsearch]'
 end
 
 # Create ES logging file
@@ -132,5 +153,10 @@ template "logging.yml" do
   source "logging.yml.erb"
   owner node.elasticsearch[:user] and group node.elasticsearch[:user] and mode 0755
 
-  notifies :restart, 'service[elasticsearch]'
+  notifies :restart, 'runit_service[elasticsearch]'
+end
+include_recipe 'runit::default'
+
+runit_service 'elasticsearch' do
+  default_logger true
 end

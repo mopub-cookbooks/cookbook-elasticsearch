@@ -1,0 +1,5 @@
+#!/bin/sh
+exec 2>&1
+source /data/elasticsearch/current/config/elasticsearch-env.sh
+exec chpst -l /data/elasticsearch/shared/elasticsearch.lock -- /data/elasticsearch/current/bin/elasticsearch -f
+
