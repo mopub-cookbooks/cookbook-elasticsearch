@@ -1,0 +1,100 @@
+I, [2013-05-22T01:28:40.515651 #21061]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T01:28:40.518089 #21061]  INFO -- Kitchen: -----> Creating <default-precise>
+I, [2013-05-22T01:28:41.793761 #21061]  INFO -- Kitchen: -----> Converging <default-precise>
+I, [2013-05-22T01:29:04.304623 #21061]  INFO -- Kitchen: -----> Kitchen is finished. (0m23.79s)
+I, [2013-05-22T01:34:36.276760 #23644]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T01:34:36.279281 #23644]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T01:34:39.839699 #23644]  INFO -- Kitchen: -----> Kitchen is finished. (0m3.56s)
+I, [2013-05-22T01:34:40.340978 #23681]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T01:34:40.343463 #23681]  INFO -- Kitchen: -----> Creating <default-precise>
+I, [2013-05-22T01:34:44.615987 #23681]  INFO -- Kitchen: -----> Converging <default-precise>
+I, [2013-05-22T01:35:02.210342 #23681]  INFO -- Kitchen: -----> Kitchen is finished. (0m21.87s)
+I, [2013-05-22T02:25:56.794893 #557]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:25:56.797417 #557]  INFO -- Kitchen: -----> Converging <default-precise>
+E, [2013-05-22T02:26:09.190798 #557] ERROR -- Kitchen: Converge failed on instance <default-precise>.
+I, [2013-05-22T02:44:28.172055 #4059]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:44:28.174519 #4059]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T02:44:31.879612 #4059]  INFO -- Kitchen: -----> Kitchen is finished. (0m3.71s)
+I, [2013-05-22T02:44:32.384729 #4096]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:44:32.387194 #4096]  INFO -- Kitchen: -----> Creating <default-precise>
+I, [2013-05-22T02:44:33.661512 #4096]  INFO -- Kitchen: -----> Converging <default-precise>
+E, [2013-05-22T02:44:46.894391 #4096] ERROR -- Kitchen: Converge failed on instance <default-precise>.
+I, [2013-05-22T02:45:52.110459 #4994]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:45:52.112954 #4994]  INFO -- Kitchen: -----> Converging <default-precise>
+E, [2013-05-22T02:46:07.742273 #4994] ERROR -- Kitchen: Converge failed on instance <default-precise>.
+I, [2013-05-22T02:49:47.717837 #5805]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:49:47.720486 #5805]  INFO -- Kitchen: -----> Converging <default-precise>
+E, [2013-05-22T02:50:03.874446 #5805] ERROR -- Kitchen: Converge failed on instance <default-precise>.
+I, [2013-05-22T02:50:49.527892 #6170]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:50:49.530408 #6170]  INFO -- Kitchen: -----> Converging <default-precise>
+E, [2013-05-22T02:51:05.133181 #6170] ERROR -- Kitchen: Converge failed on instance <default-precise>.
+I, [2013-05-22T02:51:28.793503 #6481]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:51:28.796025 #6481]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T02:51:32.351646 #6481]  INFO -- Kitchen: -----> Kitchen is finished. (0m3.56s)
+I, [2013-05-22T02:53:12.947483 #6823]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:53:12.949912 #6823]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T02:53:12.951082 #6823]  INFO -- Kitchen: -----> Kitchen is finished. (0m0.00s)
+I, [2013-05-22T02:53:15.004837 #6837]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:53:15.007227 #6837]  INFO -- Kitchen: -----> Creating <default-precise>
+I, [2013-05-22T02:53:19.271378 #6837]  INFO -- Kitchen: -----> Converging <default-precise>
+I, [2013-05-22T02:53:34.772710 #6837]  INFO -- Kitchen: -----> Kitchen is finished. (0m19.77s)
+I, [2013-05-22T02:55:52.974239 #7989]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:55:52.976760 #7989]  INFO -- Kitchen: -----> Converging <default-precise>
+I, [2013-05-22T02:56:08.590421 #7989]  INFO -- Kitchen: -----> Kitchen is finished. (0m15.62s)
+I, [2013-05-22T02:57:06.509713 #8387]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:57:06.512311 #8387]  INFO -- Kitchen: -----> Converging <default-precise>
+E, [2013-05-22T02:57:21.014709 #8387] ERROR -- Kitchen: Converge failed on instance <default-precise>.
+I, [2013-05-22T02:59:05.034535 #8888]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T02:59:05.037034 #8888]  INFO -- Kitchen: -----> Converging <default-precise>
+E, [2013-05-22T02:59:19.342764 #8888] ERROR -- Kitchen: Converge failed on instance <default-precise>.
+I, [2013-05-22T03:00:57.551752 #9377]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T03:00:57.554269 #9377]  INFO -- Kitchen: -----> Converging <default-precise>
+E, [2013-05-22T03:01:09.995224 #9377] ERROR -- Kitchen: Converge failed on instance <default-precise>.
+I, [2013-05-22T03:04:50.214229 #10159]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T03:04:50.216743 #10159]  INFO -- Kitchen: -----> Converging <default-precise>
+E, [2013-05-22T03:05:02.567383 #10159] ERROR -- Kitchen: Converge failed on instance <default-precise>.
+I, [2013-05-22T03:06:28.785268 #10615]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T03:06:28.787783 #10615]  INFO -- Kitchen: -----> Converging <default-precise>
+I, [2013-05-22T03:06:52.796334 #10615]  INFO -- Kitchen: -----> Kitchen is finished. (0m24.01s)
+I, [2013-05-22T03:08:20.619590 #13447]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T03:08:20.622092 #13447]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T03:08:24.244078 #13447]  INFO -- Kitchen: -----> Kitchen is finished. (0m3.62s)
+I, [2013-05-22T21:18:40.335006 #22348]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T21:18:40.337390 #22348]  INFO -- Kitchen: -----> Creating <default-precise>
+I, [2013-05-22T21:18:41.601832 #22348]  INFO -- Kitchen: -----> Converging <default-precise>
+I, [2013-05-22T21:19:04.750683 #22348]  INFO -- Kitchen: -----> Kitchen is finished. (0m24.42s)
+I, [2013-05-22T21:24:54.235500 #26376]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T21:24:54.237983 #26376]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T21:24:58.184359 #26376]  INFO -- Kitchen: -----> Kitchen is finished. (0m3.95s)
+I, [2013-05-22T22:22:32.777715 #19150]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T22:22:32.780158 #19150]  INFO -- Kitchen: -----> Creating <default-precise>
+I, [2013-05-22T22:22:34.044516 #19150]  INFO -- Kitchen: -----> Converging <default-precise>
+E, [2013-05-22T22:22:46.536632 #19150] ERROR -- Kitchen: Converge failed on instance <default-precise>.
+I, [2013-05-22T22:46:19.092512 #5762]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T22:46:19.095078 #5762]  INFO -- Kitchen: -----> Converging <default-precise>
+E, [2013-05-22T22:46:43.108250 #5762] ERROR -- Kitchen: Converge failed on instance <default-precise>.
+I, [2013-05-22T22:54:42.999183 #9761]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T22:54:43.001761 #9761]  INFO -- Kitchen: -----> Converging <default-precise>
+I, [2013-05-22T22:55:00.693066 #9761]  INFO -- Kitchen: -----> Kitchen is finished. (0m17.69s)
+I, [2013-05-22T22:56:50.845670 #10520]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T22:56:50.848174 #10520]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T22:56:54.883742 #10520]  INFO -- Kitchen: -----> Kitchen is finished. (0m4.04s)
+I, [2013-05-22T22:58:15.650870 #10856]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T22:58:15.653253 #10856]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T22:58:15.654408 #10856]  INFO -- Kitchen: -----> Kitchen is finished. (0m0.00s)
+I, [2013-05-22T22:58:16.145786 #10862]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T22:58:16.148149 #10862]  INFO -- Kitchen: -----> Cleaning up any prior instances of <default-precise>
+I, [2013-05-22T22:58:16.148275 #10862]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T22:58:16.149365 #10862]  INFO -- Kitchen: -----> Testing <default-precise>
+I, [2013-05-22T22:58:16.149448 #10862]  INFO -- Kitchen: -----> Creating <default-precise>
+I, [2013-05-22T22:58:20.514613 #10862]  INFO -- Kitchen: -----> Converging <default-precise>
+I, [2013-05-22T22:58:49.121475 #10862]  INFO -- Kitchen: -----> Setting up <default-precise>
+I, [2013-05-22T22:58:55.390310 #10862]  INFO -- Kitchen: -----> Verifying <default-precise>
+I, [2013-05-22T22:58:57.383624 #10862]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T22:59:01.245997 #10862]  INFO -- Kitchen: -----> Kitchen is finished. (0m45.10s)
+I, [2013-05-22T23:01:20.242700 #14701]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T23:01:20.245102 #14701]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T23:01:20.246264 #14701]  INFO -- Kitchen: -----> Kitchen is finished. (0m0.00s)
+I, [2013-05-22T23:26:08.120635 #19047]  INFO -- Kitchen: -----> Starting Kitchen
+I, [2013-05-22T23:26:08.123034 #19047]  INFO -- Kitchen: -----> Destroying <default-precise>
+I, [2013-05-22T23:26:08.124221 #19047]  INFO -- Kitchen: -----> Kitchen is finished. (0m0.00s)

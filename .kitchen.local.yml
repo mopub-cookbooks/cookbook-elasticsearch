@@ -1,0 +1,9 @@
+---
+driver_plugin: lxc
+
+platforms:
+- name: precise
+  driver_config:
+    base_container: precise-testing
+    username: ubuntu
+    password: ubuntu

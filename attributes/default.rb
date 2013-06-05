@@ -57,6 +57,8 @@ default.elasticsearch[:bootstrap][:mlockall] = true
 default.elasticsearch[:limits][:memlock] = 'unlimited'
 default.elasticsearch[:limits][:nofile]  = '64000'
 
+default.elasticsearch[:http][:compression] = true
+
 # === PRODUCTION SETTINGS
 #
 default.elasticsearch[:index][:mapper][:dynamic]   = true
@@ -64,7 +66,7 @@ default.elasticsearch[:action][:auto_create_index] = true
 default.elasticsearch[:action][:disable_delete_all_indices] = true
 default.elasticsearch[:node][:max_local_storage_nodes] = 1
 
-default.elasticsearch[:discovery][:zen][:ping][:multicast][:enabled] = true
+default.elasticsearch[:discovery][:zen][:ping][:multicast][:enabled] = false
 default.elasticsearch[:discovery][:zen][:minimum_master_nodes] = 1
 default.elasticsearch[:gateway][:type] = 'local'
 default.elasticsearch[:gateway][:expected_nodes] = 1
