@@ -3,7 +3,7 @@ maintainer_email "scott@mopub.com"
 license          "Apache"
 description      "Installs and configures elasticsearch"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.markdown'))
-version          "0.2.8"
+version          "0.2.10"
 name             "elasticsearch"
 
 depends 'java'
